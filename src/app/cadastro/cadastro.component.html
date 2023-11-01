@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <h1>Tarefas</h1>
+
+    <div>
+        <input type="text" class="form-control" [(ngModel)]="tarefas">
+    </div>
+    <div class="container">
+        <h3>Tarefas cadastradas</h3>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let tarefa of listaTarefas">{{tarefa}}</li>
+        </ul>
+    </div>
+</div>
