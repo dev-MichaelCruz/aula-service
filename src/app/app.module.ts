@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
-import { CadastroService } from './cadastro/cadastro.component.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +14,7 @@ import { CadastroService } from './cadastro/cadastro.component.service';
     BrowserModule,
     FormsModule
   ],
-  providers: [CadastroService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
