@@ -1,5 +1,5 @@
 <div class="container-fluid">
-    <h1>Livros</h1>
+    <h1>Cadastro de Livros</h1>
 
     <div class="row row-cols-4">
         <div class="col">
@@ -14,7 +14,7 @@
         </div>
         <div class="col" width=>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" [(ngModel)]="anoPublicacao" placeholder="Ano">
+                <input type="number" class="form-control" [(ngModel)]="anoPublicacao" placeholder="Ano">
             </div>
         </div>
         <div class="col">
@@ -31,7 +31,7 @@
             <thead>
                 <tr>
                     <th>Lido</th>
-                    <th>ID</th>
+                    <th>#</th>
                     <th>Título</th>
                     <th>Autor</th>
                     <th>Ano de Publicação</th>
@@ -46,7 +46,7 @@
                     <td>{{livro.titulo}}</td>
                     <td>{{livro.autor}}</td>
                     <td>{{livro.anoPublicacao}}</td>
-                    <td><button class="btn btn-danger" (click)="removeLivro(i)">Excluir</button></td>
+                    <td><button class="btn btn-danger" (click)="removeLivro(i)">Excluir Livro</button></td>
                 </tr>
             </tbody>
         </table>

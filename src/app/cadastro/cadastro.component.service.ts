@@ -3,7 +3,7 @@ import { Livro } from "./ILivro";
 export class CadastroService {
     livros: Livro[] = [];
 
-    addLivro(titulo: string, autor: string, anoPublicacao: string) {
+    addLivro(titulo: string, autor: string, anoPublicacao: number) {
         const novoLivro: Livro = {
             titulo,
             autor,

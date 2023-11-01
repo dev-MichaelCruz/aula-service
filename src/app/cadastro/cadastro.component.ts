@@ -13,7 +13,7 @@ export class CadastroComponent {
 
   titulo!: string
   autor!: string
-  anoPublicacao!: string
+  anoPublicacao!: number
 
   constructor(private cadastroService: CadastroService) {
     this.listaLivros = this.cadastroService.livros;
@@ -31,7 +31,7 @@ export class CadastroComponent {
   clearDados() {
     this.titulo = "";
     this.autor = "";
-    this.anoPublicacao = "";
+    this.anoPublicacao;
   }
 
 }
