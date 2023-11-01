@@ -1,13 +1,54 @@
 <div class="container-fluid">
-    <h1>Tarefas</h1>
+    <h1>Livros</h1>
 
-    <div>
-        <input type="text" class="form-control" [(ngModel)]="tarefas">
+    <div class="row row-cols-4">
+        <div class="col">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" [(ngModel)]="titulo" placeholder="Titulo do Livro">
+            </div>
+        </div>
+        <div class="col">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" [(ngModel)]="autor" placeholder="Autor">
+            </div>
+        </div>
+        <div class="col" width=>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" [(ngModel)]="anoPublicacao" placeholder="Ano">
+            </div>
+        </div>
+        <div class="col">
+            <div class="input-group mb-3">
+                <button class="btn btn-primary form-control" (click)="addLivro()">Adicionar livro</button>
+            </div>
+        </div>
     </div>
+
     <div class="container">
-        <h3>Tarefas cadastradas</h3>
-        <ul class="list-group">
-            <li class="list-group-item" *ngFor="let tarefa of listaTarefas">{{tarefa}}</li>
-        </ul>
+        <h3>Livros cadastrados</h3>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Lido</th>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Ano de Publicação</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let livro of listaLivros; let i = index">
+                    <td><input type="checkbox"></td>
+                    <th>{{i + 1}}</th>
+                    <td>{{livro.titulo}}</td>
+                    <td>{{livro.autor}}</td>
+                    <td>{{livro.anoPublicacao}}</td>
+                    <td><button class="btn btn-danger" (click)="removeLivro(i)">Excluir</button></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
