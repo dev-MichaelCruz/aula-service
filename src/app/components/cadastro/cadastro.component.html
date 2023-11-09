@@ -21,7 +21,8 @@
         </div>
         <div class="col">
             <div class="input-group mb-3">
-                <button class="btn btn-primary form-control" (click)="addLivro()">Adicionar livro</button>
+                <button class="btn btn-primary form-control" (click)="addLivro()"
+                    [disabled]="!titulo || !autor || !anoPublicacao">Adicionar livro</button>
             </div>
         </div>
     </div>
@@ -79,11 +80,15 @@
                 <label> Autor</label>
                 <input class="form-control" type="text" placeholder="Autor" [(ngModel)]="novoAutor">
                 <label> Ano de Publicação</label>
-                <input class="form-control" type="text" placeholder="Ano de Publicação" [(ngModel)]="novoAnoPublicacao">
+                <input class="form-control" type="number" placeholder="Ano de Publicação"
+                    [(ngModel)]="novoAnoPublicacao"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
+                    maxlength="4">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-                <button type="button" class="btn btn-success" (click)="editarDados()" data-bs-dismiss="modal">Salvar
+                <button type="button" class="btn btn-success" (click)="editarDados()" data-bs-dismiss="modal"
+                    [disabled]="!novoTitulo || !novoAutor || !novoAnoPublicacao">Salvar
                     Alterações</button>
             </div>
         </div>

@@ -33,7 +33,7 @@ export class CadastroComponent {
   }
 
   removeLivro(index: number) {
-    const modificacao: string[] = ["Livro Excluído"]
+    const modificacao: string[] = ["Livro " + this.cadastroService.getLivro(index).titulo + " excluído"]
     this.cadastroService.removeLivro(index)
     this.logService.addLogs(this.obterHoraAtual(), this.obterDataAtual(), modificacao, "Exclusão")
   }
@@ -52,10 +52,10 @@ export class CadastroComponent {
       modificacoes.push("Título modificado de: " + livroAtual.titulo + " para: " + this.novoTitulo);
     }
     if (livroAtual.autor != this.novoAutor) {
-      modificacoes.push("Título modificado de: " + livroAtual.autor + " para: " + this.novoAutor);
+      modificacoes.push("Autor modificado de: " + livroAtual.autor + " para: " + this.novoAutor);
     }
     if (livroAtual.anoPublicacao != this.novoAnoPublicacao) {
-      modificacoes.push("Título modificado de: " + livroAtual.anoPublicacao + " para: " + this.novoAnoPublicacao);
+      modificacoes.push("Ano de Publicação modificado de: " + livroAtual.anoPublicacao + " para: " + this.novoAnoPublicacao);
     }
 
     this.salvarAlteracoes(this.indexEdicao)
