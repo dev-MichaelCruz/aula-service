@@ -1,4 +1,4 @@
-export interface Livro {
+export interface ILivro {
     titulo: string,
     autor: string,
     anoPublicacao: string

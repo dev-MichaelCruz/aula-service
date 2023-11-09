@@ -1,0 +1,21 @@
+<table>
+    <thead>
+        <tr>
+            <th>Hora</th>
+            <th>Data</th>
+            <th>Modificação</th>
+            <th>Tipo</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let log of listaLogs">
+            <td>{{log.hora}}</td>
+            <td>{{log.data}}</td>
+            <td>
+                <div *ngFor="let mod of log.modificacao">{{mod}}</div>
+            </td>
+            <td>{{log.tipo}}</td>
+        </tr>
+    </tbody>
+</table>
