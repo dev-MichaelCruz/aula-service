@@ -16,6 +16,8 @@ export class LogsComponent {
   }
 
   clearLogs() {
-    this.listaLogs = [];
+    for (let log of this.listaLogs) {
+      this.listaLogs.shift();
+    }
   }
 }
