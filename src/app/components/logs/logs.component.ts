@@ -14,4 +14,8 @@ export class LogsComponent {
     this.listaLogs = logService.listaLogs
     console.log(this.listaLogs)
   }
+
+  clearLogs() {
+    this.listaLogs = [];
+  }
 }
