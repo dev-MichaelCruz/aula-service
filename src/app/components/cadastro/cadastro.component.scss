@@ -13,12 +13,14 @@
 }
 
 .table thead tr th {
-    background: rgb(100, 196, 228) !important;
-
+    background: rgb(15, 86, 193) !important;
+    color: white;
 }
 
-.table tbody {
-    background: rgb(171, 230, 157) !important;
+.table tbody tr td,
+th {
+    background: rgb(157, 197, 240) !important;
+    border: 1px solid white;
 }
 
 .btn btn-primary form-control {
