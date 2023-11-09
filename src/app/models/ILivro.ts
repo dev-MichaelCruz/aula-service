@@ -1,5 +1,5 @@
 export interface ILivro {
     titulo: string,
     autor: string,
-    anoPublicacao: string
+    anoPublicacao: number
 }   

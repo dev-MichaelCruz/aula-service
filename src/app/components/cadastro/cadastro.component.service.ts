@@ -3,7 +3,7 @@ import { ILivro } from "../../models/ILivro";
 export class CadastroService {
     livros: ILivro[] = [];
 
-    addLivro(titulo: string, autor: string, anoPublicacao: string) {
+    addLivro(titulo: string, autor: string, anoPublicacao: number) {
         const novoLivro: ILivro = {
             titulo,
             autor,
@@ -20,7 +20,7 @@ export class CadastroService {
         return this.livros[index];
     }
 
-    salvarAlteracoes(index: number, novoTitulo: string, novoAutor: string, novoAnoPublicacao: string) {
+    salvarAlteracoes(index: number, novoTitulo: string, novoAutor: string, novoAnoPublicacao: number) {
         const novoLivro: ILivro = {
             titulo: novoTitulo,
             autor: novoAutor,

@@ -14,7 +14,9 @@
         </div>
         <div class="col" width=>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" [(ngModel)]="anoPublicacao" placeholder="Ano">
+                <input type="number" class="form-control" [(ngModel)]="anoPublicacao" placeholder="Ano"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                    maxlength="4">
             </div>
         </div>
         <div class="col">

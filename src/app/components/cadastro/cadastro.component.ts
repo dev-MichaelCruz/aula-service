@@ -16,11 +16,11 @@ export class CadastroComponent {
 
   titulo!: string
   autor!: string
-  anoPublicacao!: string
+  anoPublicacao!: number
 
   novoTitulo!: string
   novoAutor!: string
-  novoAnoPublicacao!: string
+  novoAnoPublicacao!: number
 
 
   constructor(private cadastroService: CadastroService, private router: Router, private logService: LogService) {
@@ -41,7 +41,7 @@ export class CadastroComponent {
   clearDados() {
     this.titulo = "";
     this.autor = "";
-    this.anoPublicacao = "";
+    this.anoPublicacao;
   }
 
   editarDados() {
