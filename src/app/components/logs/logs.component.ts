@@ -16,7 +16,7 @@ export class LogsComponent {
   }
 
   clearLogs() {
-    for (let log of this.listaLogs) {
+    while (this.listaLogs.length > 0) {
       this.listaLogs.shift();
     }
   }
