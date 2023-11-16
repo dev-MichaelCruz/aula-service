@@ -16,8 +16,8 @@ export class CadastroService {
         this.livros.splice(index, 1);
     }
 
-    getLivro(index: number): ILivro {
-        return this.livros[index];
+    getLivro(index: number) {
+        return this.livros[index]
     } //Retirar e acessar direto.
 
     salvarAlteracoes(index: number, novoTitulo: string, novoAutor: string, novoAnoPublicacao: number) {
