@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { ILog } from "src/app/models/ILogs";
 
 
+
 @Injectable()
 export class LogService {
     listaLogs: ILog[] = []
@@ -18,5 +19,4 @@ export class LogService {
 
         this.listaLogs.push(novaLog)
     }
-
 }

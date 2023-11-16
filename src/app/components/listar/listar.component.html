@@ -1,1 +1,67 @@
 <app-cadastro />
+<div class="container">
+    <h3>Livros cadastrados</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Lido</th>
+                <th>ID</th>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Ano de Publicação</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let livro of listaLivros; let i = index">
+                <td><input type="checkbox"></td>
+                <th>{{i + 1}}</th>
+                <td>{{livro.titulo}}</td>
+                <td>{{livro.autor}}</td>
+                <td>{{livro.anoPublicacao}}</td>
+                <td>
+                    <button class="btn btn-warning me-1" (click)="edicaoLivro(i)" data-bs-toggle="modal"
+                        data-bs-target="#modal1">Editar</button>
+                    <button class="btn btn-danger" (click)="removeLivro(i)">Excluir</button>
+                </td>
+            </tr>
+        </tbody>
+        <br>
+        <button class="btn btn-primary" (click)="redirecionar('/logs')">Logs</button>
+    </table>
+</div>
+
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modal1Label">Editar Livro</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <table>
+                <tbody>
+
+                </tbody>
+            </table>
+            <div class="modal-body">
+                <label> Título</label>
+                <input class="form-control" type="text" placeholder="Título" [(ngModel)]="novoTitulo">
+                <label> Autor</label>
+                <input class="form-control" type="text" placeholder="Autor" [(ngModel)]="novoAutor">
+                <label> Ano de Publicação</label>
+                <input class="form-control" type="number" placeholder="Ano de Publicação"
+                    [(ngModel)]="novoAnoPublicacao"
+                    oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)"
+                    maxlength="4">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-success" (click)="editarDados()" data-bs-dismiss="modal"
+                    [disabled]="!novoTitulo || !novoAutor || !novoAnoPublicacao">Salvar
+                    Alterações</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+.container h3 {
+    color: rgb(37, 190, 241);
+
+}
+
+.table thead tr th {
+    background: rgb(15, 86, 193) !important;
+    color: white;
+}
+
+.table tbody tr td,
+th {
+    background: rgb(157, 197, 240) !important;
+    border: 1px solid white;
+}
+
+.btn btn-primary form-control {
+    color: orange
+}

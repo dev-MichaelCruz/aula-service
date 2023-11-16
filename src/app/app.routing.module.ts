@@ -5,7 +5,7 @@ import { LogsComponent } from './components/logs/logs.component';
 
 const routes: Routes = [
     { path: '', component: ListarComponent },
-    { path: 'cadastrados', component: LogsComponent }
+    { path: 'logs', component: LogsComponent }
 ];
 
 @NgModule({

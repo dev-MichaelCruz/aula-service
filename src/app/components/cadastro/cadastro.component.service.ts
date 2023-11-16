@@ -18,7 +18,7 @@ export class CadastroService {
 
     getLivro(index: number): ILivro {
         return this.livros[index];
-    }
+    } //Retirar e acessar direto.
 
     salvarAlteracoes(index: number, novoTitulo: string, novoAutor: string, novoAnoPublicacao: number) {
         const novoLivro: ILivro = {
