@@ -1,3 +1,4 @@
+import { Injectable } from "@angular/core";
 import { ILivro } from "../../models/ILivro";
 
 export class CadastroService {
@@ -18,7 +19,7 @@ export class CadastroService {
 
     getLivro(index: number) {
         return this.livros[index]
-    } //Retirar e acessar direto.
+    }
 
     salvarAlteracoes(index: number, novoTitulo: string, novoAutor: string, novoAnoPublicacao: number) {
         const novoLivro: ILivro = {

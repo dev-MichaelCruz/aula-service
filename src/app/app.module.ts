@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { ListarComponent } from './components/listar/listar.component';
 import { LogsComponent } from './components/logs/logs.component';
+import { LoginComponent } from './components/login/login.component';
 
 import { CadastroService } from './components/cadastro/cadastro.component.service';
 import { LogService } from './components/logs/logs.service';
@@ -16,7 +17,8 @@ import { LogService } from './components/logs/logs.service';
     AppComponent,
     CadastroComponent,
     ListarComponent,
-    LogsComponent
+    LogsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
