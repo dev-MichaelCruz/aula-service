@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ILivro } from 'src/app/models/ILivro';
 import { CadastroService } from '../cadastro/cadastro.component.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { LogService } from '../logs/logs.service';
 
 @Component({
@@ -18,7 +18,7 @@ export class ListarComponent {
   novoAutor!: string
   novoAnoPublicacao!: number
 
-  constructor(private cadastroService: CadastroService, private router: Router, private logService: LogService) {
+  constructor(private cadastroService: CadastroService, private router: Router, private logService: LogService, private route: ActivatedRoute) {
     this.listaLivros = this.cadastroService.livros;
   }
 
@@ -36,6 +36,7 @@ export class ListarComponent {
     this.cadastroService.removeLivro(index)
     this.logService.addLogs(this.obterHoraAtual(), this.obterDataAtual(), modificacao, "Exclusão")
   }
+
   obterHoraAtual(): string {
     const dataAtual = new Date();
     const hora = this.formatarNumero(dataAtual.getHours());

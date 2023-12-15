@@ -1,17 +1,18 @@
-<div class="container-fluid">
-    <h1>Login</h1>
+<div class="telinha-login">
+    <div class="container-fluid">
+        <h1>Login</h1>
     
-    <div>
-        <input type="text" class="form-control" [(ngModel)]="login" placeholder="Digite seu email ou nome de usuário">
+        <div>
+            <input type="text" class="form-control" [(ngModel)]="login" placeholder="Digite seu email ou nome de usuário">
+        </div>
+    
+        <div>
+            <input type="password" class="form-control" [(ngModel)]="senha" placeholder="Digite sua senha">
+        </div>
+    
+        <div>
+            <button class="btn btn-primary form-control" (click)="runLogin('cadastro')"
+                [disabled]="!login || !senha">Login</button>
+        </div>
     </div>
-
-    <div>
-        <input type="password" class="form-control" [(ngModel)]="senha" placeholder="Digite sua senha">
-    </div>
-
-    <div>
-        <button class="btn btn-primary form-control" (click)="runLogin('cadastro')"
-            [disabled]="!login || !senha">Login</button>
-    </div>
-
 </div>
