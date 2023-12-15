@@ -4,20 +4,26 @@
 }
 
 .container-fluid {
-    margin: 30px;
+    margin-top: 30px;
+    padding: 1em;
     background-color: antiquewhite;
     background: none;
     border-radius: 5px;
-
-   
+    width: 40%;
+    border-style: solid;
+    border-color: rgb(37, 190, 241);
 }
 
 h1 {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: rgb(37, 190, 241);
+    margin-bottom: .5rem;
+    
 }
 
 input {
-    text-align: left;
+    text-align: center;
     background-color: white;
+    margin-bottom: .5em;
 }
+
